@@ -9,12 +9,35 @@
 </head>
 <body>
   <header>
-    <h1 class="text-5xl text-center">Hunting Phone</h1>
+    <h1 class="text-5xl text-center my-5">Hunting Phone</h1>
   </header>
-  <main>
-    <section>
-      <div id="phone-container" class="grid grid-cols-3 gap-3">
+  <main class="container mx-auto">
 
+
+
+    <section>
+      
+      <div class="bg-gray-200 p-2 rounded-md">
+        <input id="search-field" type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+        <button onclick="handleSearch()" class="btn">Search</button>
+      </div>
+      <!-- loading spiner -->
+      <div id="loading-spiner" class="text-center my-50  hidden">
+        <span class="loading loading-spinner loading-md"></span>
+      </div>
+
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+
+      </div>
+      <!-- show detail -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+          
+        </dialog> 
+
+      <!-- show all buton -->
+      <div id="show-all-container" class="hidden text-center my-8">
+        <button onclick="showAll()" class="btn btn-accent">Show All</button>
       </div>
     </section>
 
